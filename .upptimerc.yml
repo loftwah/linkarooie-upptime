@@ -23,9 +23,12 @@ status-website:
   introMessage: |
     Welcome to the status page for **Linkarooie**. 
     This page shows **real-time** uptime data for Linkarooie services, powered by GitHub Actions.
+    Visit the main site at [**Linkarooie.com**](https://linkarooie.com) for more information.
   navbar:
     - title: Status
       href: /
+    - title: Linkarooie Main Site
+      href: https://linkarooie.com
     - title: GitHub
       href: https://github.com/Loftwah/linkarooie-upptime
 
