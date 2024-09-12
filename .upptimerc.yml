@@ -13,22 +13,57 @@ assignees:
 
 # Status website configuration
 status-website:
-  # If you're using a custom domain (like status.linkarooie.com), add it here
+  # Custom domain for your status page (if you have one)
   cname: status.linkarooie.com
-  # If you're not using a custom domain, uncomment the line below and add your repo name
-  # baseUrl: /linkarooie-upptime 
-  logoUrl: https://linkarooie.com/favicon.ico # Update with your logo if available
-  name: Linkarooie Status # Status website title
-  introTitle: "Linkarooie Status"
-  introMessage: "This page shows **real-time** uptime data for Linkarooie. Powered by [GitHub Actions](https://github.com/features/actions) and [Upptime](https://github.com/upptime/upptime)."
-
+  # baseUrl: /linkarooie-upptime # Uncomment if not using a custom domain
+  logoUrl: https://linkarooie.com/favicon.ico
+  favicon: https://linkarooie.com/favicon.ico
+  name: Linkarooie Status
+  introTitle: "**Linkarooie** Status"
+  introMessage: |
+    Welcome to the status page for **Linkarooie**. 
+    This page shows **real-time** uptime data for Linkarooie services, powered by GitHub Actions.
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/Loftwah/linkarooie-upptime
 
-# Optional notifications (e.g., Slack, Discord)
+  # Use a custom dark theme based on your site's colour scheme
+  theme: dark
+  customHeadHtml: |
+    <!-- Custom styles -->
+    <style>
+      body {
+        background-color: #1a1a1a; /* Dark background */
+        color: #e0e0e0; /* Light text */
+      }
+      .navbar {
+        background-color: #212121; /* Darker navbar */
+      }
+      a {
+        color: #39ff14; /* Neon green links */
+      }
+      .navbar-brand img {
+        width: 50px; /* Adjust the size of the logo in the navbar */
+      }
+    </style>
+  customBodyHtml: "<!-- Custom HTML for body if needed -->"
+
+# Add notifications (optional)
 notifications:
   slack: false
   discord: false
+
+# GitHub Actions scheduling configuration
+workflowSchedule:
+  uptime: "*/5 * * * *"  # Uptime check every 5 minutes
+  responseTime: "0 23 * * *"  # Log response time once a day
+  staticSite: "0 1 * * *"  # Update static site once a day
+  summary: "0 0 * * *"  # Update summary once a day
+
+# Commit message customization for more personalized logs
+commitMessages:
+  statusChange: "🚨 $SITE_NAME is $STATUS ($RESPONSE_CODE in $RESPONSE_TIME ms)"
+  graphsUpdate: ":chart_with_upwards_trend: Update graphs [upptime]"
+  summaryJson: ":card_file_box: Update status summary [skip ci]"
