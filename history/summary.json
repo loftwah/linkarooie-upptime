@@ -5,18 +5,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/linkarooie.com.ico",
     "slug": "linkarooie",
     "status": "down",
-    "uptime": "99.73%",
-    "uptimeDay": "99.32%",
-    "uptimeWeek": "99.73%",
-    "uptimeMonth": "99.73%",
-    "uptimeYear": "99.73%",
-    "time": 582,
-    "timeDay": 544,
-    "timeWeek": 582,
-    "timeMonth": 582,
-    "timeYear": 582,
-    "dailyMinutesDown": {
-      "2024-09-14": 10
-    }
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 559,
+    "timeDay": 447,
+    "timeWeek": 559,
+    "timeMonth": 559,
+    "timeYear": 559,
+    "dailyMinutesDown": {}
   }
 ]
